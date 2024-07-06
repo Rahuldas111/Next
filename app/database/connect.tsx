@@ -10,5 +10,6 @@ const sequelize = new Sequelize({
   dialectModule: require('pg'),
   logging: false,
 });
+console.log('db connection = ', sequelize);
 
 export default sequelize;
