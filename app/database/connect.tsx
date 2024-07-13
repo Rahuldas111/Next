@@ -9,7 +9,13 @@ const sequelize = new Sequelize({
   dialect: 'postgres',
   dialectModule: require('pg'),
   logging: false,
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false, // Validate the server's certificate against the CA
+      ca: process.env.NEXT_CA_PEM
+    }
+  }
 });
-console.log('db connection = ', sequelize);
 
 export default sequelize;
