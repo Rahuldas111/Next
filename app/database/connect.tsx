@@ -1,5 +1,4 @@
 import { Sequelize } from "sequelize";
-console.log('hello');
 
 const sequelize = new Sequelize({
   database: process.env.NEXT_DATABASE,
