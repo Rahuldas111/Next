@@ -1,4 +1,5 @@
 import { Sequelize } from "sequelize";
+console.log('check git action');
 
 const sequelize = new Sequelize({
   database: process.env.NEXT_DATABASE,
